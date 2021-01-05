@@ -56,7 +56,7 @@ export const Link = (): JSX.Element => {
         main {
           width: 100vw;
           height: 100vh;
-          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='48' height='48' viewport='0 0 120 120' style='font-size:48px;'><text y='85%'>✕</text></svg>")
+          cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='41' height='42' viewport='0 0 41 42' fill='none'><line x1='0.353553' y1='0.646447' x2='39.9515' y2='40.2444' stroke='silver'/><line x1='39.9515' y1='1.35355' x2='0.353536' y2='40.9515' stroke='silver'/></svg>")
               24 24,
             auto;
         }
