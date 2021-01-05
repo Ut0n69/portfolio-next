@@ -14,7 +14,8 @@
   "packageRules": [
     {
       "updateTypes": ["major"],
-      "labels": ["renovate", "update-major"]
+      "labels": ["renovate", "update-major"],
+      "schedule": ["every 3 months on the first day of the month"]
     },
     {
       "updateTypes": ["minor", "patch"],
@@ -25,11 +26,13 @@
     },
     {
       "packageNames": ["node"],
-      "labels": ["renovate", "node-version"]
+      "labels": ["renovate", "node-version"],
+      "schedule": ["every 3 months on the first day of the month"]
     },
     {
       "packageNames": ["next"],
-      "labels": ["renovate", "nextjs-version"]
+      "labels": ["renovate", "nextjs-version"],
+      "schedule": ["every 3 months on the first day of the month"]
     }
   ]
 }
