@@ -1,7 +1,9 @@
 name:
   portfolio-next-ci
 
-on: push
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   ci:
