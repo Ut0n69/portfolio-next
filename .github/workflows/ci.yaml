@@ -1,5 +1,4 @@
-name:
-  portfolio-next-ci
+name: portfolio-next-ci
 
 on:
   pull_request:
@@ -12,7 +11,7 @@ jobs:
     strategy:
       matrix:
         node-version: [12]
-    
+
     steps:
       # checkout repository
       - name: Checkout Repo
@@ -23,11 +22,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      
+
       # confirm node version
       - name: Node Version
         run: node -v
-      
+
       # cf. https://github.com/actions/cache/blob/main/examples.md#node---yarn
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
