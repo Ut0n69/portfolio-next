@@ -27,26 +27,26 @@ export const Link = (): JSX.Element => {
       </Head>
 
       <main onClick={handleClickClose}>
-        <h1 className="title">👽 Link 👽</h1>
+        <h1 className="title">Link</h1>
         <div className="container">
           <a rel="noreferrer" target="_blank" href="https://github.com/Ut0n69">
             <Tilt options={{ max: 45, reverse: true }} style={tiltStyle}>
-              GitHub
+              <div style={{ border: '1px solid' }}>GitHub</div>
             </Tilt>
           </a>
           <a rel="noreferrer" target="_blank" href="https://qiita.com/ut0n">
             <Tilt options={{ max: 45, reverse: true }} style={tiltStyle}>
-              Qiita
+              <div style={{ border: '1px solid' }}>Qiita</div>
             </Tilt>
           </a>
           <a rel="noreferrer" target="_blank" href="https://zenn.dev/ut0n">
             <Tilt options={{ max: 45, reverse: true }} style={tiltStyle}>
-              Zenn
+              <div style={{ border: '1px solid' }}>Zenn</div>
             </Tilt>
           </a>
           <a rel="noreferrer" target="_blank" href="https://codepen.io/Ut0n69">
             <Tilt options={{ max: 45, reverse: true }} style={tiltStyle}>
-              CodePen
+              <div style={{ border: '1px solid' }}>CodePen</div>
             </Tilt>
           </a>
         </div>
@@ -74,7 +74,7 @@ export const Link = (): JSX.Element => {
         .tilt {
           height: 150;
           width: 250;
-          border: 1px solid #000;
+          border: 1px solid #fff;
           line-height: 150px;
           text-align: center;
           font-size: 60px;

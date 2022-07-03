@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { pageTitle } from 'modules/utils/constValues';
 import { GET_REPOSITORY } from 'modules/graphql/fields';
 import { client } from 'modules/graphql/client';
+import Tilt from 'react-tilt';
 
 type Repository = {
   name: string;
@@ -41,38 +42,40 @@ export const GitHub = (): JSX.Element => {
       </Head>
 
       <main onClick={handleClickClose}>
-        <h1 className="title">👽 Repositories 👽</h1>
+        <h1 className="title">Repositories</h1>
         <div className="container">
           {repositories.length ? (
             repositories.map((repository: Repository, i: number) => (
               <a key={i} rel="noreferrer" target="_blank" href={repository.url}>
-                <div className="card">
-                  <h2
-                    style={{
-                      marginBottom: '8px'
-                    }}
-                  >
-                    {repository.name}
-                  </h2>
-                  <p>{repository.description || '-'}</p>
-                  {repository.primaryLanguage && (
-                    <div>
-                      <span
-                        style={{
-                          verticalAlign: 'text-bottom',
-                          marginRight: '4px',
-                          fontSize: '8px',
-                          color: repository.primaryLanguage.color
-                        }}
-                      >
-                        ●
-                      </span>
-                      <span style={{ fontSize: '14px' }}>
-                        {repository.primaryLanguage.name}
-                      </span>
-                    </div>
-                  )}
-                </div>
+                <Tilt options={{ max: 30, reverse: true }}>
+                  <div className="card">
+                    <h2
+                      style={{
+                        marginBottom: '8px'
+                      }}
+                    >
+                      {repository.name}
+                    </h2>
+                    <p>{repository.description || '-'}</p>
+                    {repository.primaryLanguage && (
+                      <div>
+                        <span
+                          style={{
+                            verticalAlign: 'text-bottom',
+                            marginRight: '4px',
+                            fontSize: '8px',
+                            color: repository.primaryLanguage.color
+                          }}
+                        >
+                          ●
+                        </span>
+                        <span style={{ fontSize: '14px' }}>
+                          {repository.primaryLanguage.name}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </Tilt>
               </a>
             ))
           ) : (
@@ -109,8 +112,8 @@ export const GitHub = (): JSX.Element => {
           max-width: 500px;
           width: 80%;
           padding: 16px;
-          margin: 8px auto;
-          border: 1px solid #000;
+          margin: 16px auto;
+          border: 1px solid #fff;
         }
 
         .footer {
