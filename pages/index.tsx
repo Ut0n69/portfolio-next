@@ -42,9 +42,6 @@ export const Top = (): JSX.Element => (
       main {
         width: 100vw;
         height: 100vh;
-        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='48' height='48' viewport='0 0 120 120' style='font-size:48px;'><text y='85%'>🌏</text></svg>")
-            24 24,
-          auto;
       }
 
       .alien {
